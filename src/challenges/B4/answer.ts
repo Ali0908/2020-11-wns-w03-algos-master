@@ -49,11 +49,31 @@
  */
 
 // ↓ uncomment bellow lines and add your response!
-/*
-export default function ({ submissions }: {submissions: Submission[] }): MonthSubmission[] {
-    return [];
-}
-*/
+// export default function ({ submissions }: {submissions: Submission[] }): MonthSubmission[] {
+//     const grouped: { [key: string]: Submission[] } = {};
+
+//     submissions.forEach(submission => {
+//         const date = new Date(submission.submittedAt);
+//         date.setUTCDate(1);
+//         date.setUTCHours(0, 0, 0, 0);
+//         const month = date.toISOString().split('T')[0] + 'T00:00:00.000Z';
+
+//         if (!grouped[month]) {
+//             grouped[month] = [];
+//         }
+
+//         grouped[month].push(submission);
+//     });
+
+//     const result: MonthSubmission[] = Object.keys(grouped).map(month => ({
+//         month,
+//         submissions: grouped[month]
+//     }));
+
+//     result.sort((a, b) => a.month.localeCompare(b.month));
+
+//     return result;
+// }
 
 // used interfaces, do not touch
 export interface Submission {

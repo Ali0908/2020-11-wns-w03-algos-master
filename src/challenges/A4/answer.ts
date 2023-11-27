@@ -27,11 +27,30 @@
  */
 
 // ↓ uncomment bellow lines and add your response!
-/*
-export default function ({ messages }: { messages: Message[] }): DayMessages[] {
-    return [];
-}
-*/
+// export default function ({ messages }: { messages: Message[] }): DayMessages[] {
+//     const grouped: { [key: string]: Message[] } = {};
+
+//     messages.forEach(message => {
+//         const date = new Date(message.sentAt);
+//         date.setUTCHours(0, 0, 0, 0);
+//         const day = date.toISOString().split('T')[0] + 'T00:00:00.000Z';
+
+//         if (!grouped[day]) {
+//             grouped[day] = [];
+//         }
+
+//         grouped[day].push(message);
+//     });
+
+//     const result: DayMessages[] = Object.keys(grouped).map(day => ({
+//         day,
+//         messages: grouped[day]
+//     }));
+
+//     result.sort((a, b) => a.day.localeCompare(b.day));
+
+//     return result;
+// }
 
 // used interfaces, do not touch
 export interface Message {
